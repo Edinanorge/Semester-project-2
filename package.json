@@ -1,0 +1,26 @@
+{
+  "name": "auction-app",
+  "version": "0.0.1",
+  "description": "Auction app for Noroff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edinanorge/Semester-project-2.git"
+  },
+  "keywords": [
+    "auction",
+    "marked",
+    "bootstrap",
+    "sass",
+    "eslint"
+  ],
+  "author": "Edina Isztojka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edinanorge/Semester-project-2/issues"
+  },
+  "homepage": "https://github.com/Edinanorge/Semester-project-2#readme"
+}
