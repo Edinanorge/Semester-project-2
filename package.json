@@ -10,7 +10,8 @@
     "start": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier -w src/js/**/*.js",
     "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js"
+    "lint-fix": "eslint src/**/*.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,11 +32,29 @@
   "homepage": "https://github.com/Edinanorge/Semester-project-2#readme",
   "devDependencies": {
     "eslint": "^8.38.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "live-server": "^1.2.2",
     "prettier": "^2.8.7",
     "sass": "^1.62.0"
   },
   "dependencies": {
     "bootstrap": "^5.2.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "eslint --cache --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
+    ]
   }
 }
