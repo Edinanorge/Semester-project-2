@@ -23,6 +23,10 @@
   background-color: $white;
 }
 
+.btn-edit-profile {
+  margin-top: -70px;
+}
+
 .footer,
 .section-hero {
   background-color: $gray-200;
@@ -35,7 +39,7 @@ main {
   background-color: $gray-100;
 }
 
-.fs7 {
+.fs-7 {
   font-size: 14px;
 }
 
@@ -51,4 +55,8 @@ main {
     left: 1%;
     right: 1%;
   }
+}
+
+form {
+  max-width: 700px;
 }
