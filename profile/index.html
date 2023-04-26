@@ -93,7 +93,7 @@
         </div>
       </nav>
     </header>
-    <main class="position-relative">
+    <main>
       <section class="container-fluid section-hero">
         <div class="row text-center text-lg-start">
           <div class="col m-5 p-5" id="profileDetails">
@@ -196,7 +196,7 @@
           <img
             src="/images/hero.jpg"
             alt="Profile image"
-            class="col profile-img img-fluid pe-0"
+            class="col profile-img img-fluid p-0"
           />
           <div class="dropdown text-end">
             <button
@@ -208,18 +208,18 @@
             >
               <i class="fa-regular fa-pen-to-square"></i>
             </button>
+
             <form class="w-100 p-4 dropdown-menu" id="editProfile">
-              <p class="text-start">Update profile picture :</p>
-              <div class="form-floating">
+              <label for="avatar">Update profile picture :</label>
+              <div>
                 <input
                   type="url"
                   class="form-control mb-3 text-muted"
                   name="avatar"
-                  placeholder="Avatar"
+                  placeholder="Avatar(url)"
                   autofocus
                   required
                 />
-                <label for="verify-password">Avatar(url):</label>
               </div>
               <div id="editProfileMessage" class="fs-7 mb-1"></div>
               <button type="submit" class="btn btn-secondary">
@@ -233,7 +233,7 @@
       <section class="container-fluid section-Listings">
         <div class="mx-lg-5 px-lg-5 text-center text-lg-start">
           <h3 class="pt-lg-5 mt-lg-5">Listings:</h3>
-          <div class="" id="featuredContainer">
+          <div id="featuredContainer">
             <div class="text-center">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
