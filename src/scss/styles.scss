@@ -1,1 +1,62 @@
+@import "variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// buttons
+.btn {
+  transition: all 0.2s;
+}
+.btn-login:hover,
+.btn-logout:hover,
+.btn-register:hover,
+.btn-profile:hover,
+.btn-cta:hover {
+  transform: scale(1.1);
+}
+
+.btn-login:hover,
+.btn-logout:hover {
+  color: $red;
+}
+
+.btn-register:hover,
+.btn-profile:hover {
+  background-color: $white;
+}
+
+.btn-edit-profile {
+  margin-top: -70px;
+}
+
+.footer,
+.section-hero {
+  background-color: $gray-200;
+  .hero-img {
+    width: 450px;
+  }
+}
+
+main {
+  background-color: $gray-100;
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.section-about {
+  background-color: hsla(0, 0%, 100%, 0.85);
+  max-width: 900px;
+}
+
+@media only screen and (min-width: 992px) {
+  .section-about {
+    position: absolute;
+    top: 43%;
+    left: 1%;
+    right: 1%;
+  }
+}
+
+form {
+  max-width: 700px;
+}
