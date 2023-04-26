@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="/src/js/index.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/16bf78a0e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Noroff Marked | Listings page</title>
+  </head>
+  <body>
+    <header class="p-2 text-bg-primary sticky-top shadow">
+      <nav class="navbar navbar-dark navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex ms-lg-5 ps-lg-4" href="/">
+            <img src="/images/Logo.png" alt="Noroff marked logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon text-light"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse d-lg-flex justify-content-between pe-lg-4"
+            id="navbarScroll"
+          >
+            <form class="d-flex m-3 m-lg-0">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <div class="text-center" id="#authLinks">
+              <a
+                class="btn text-white fw-semibold btn-login"
+                href="/listings/"
+                role="button"
+                >Exlpore</a
+              >
+              <a
+                class="btn btn-outline-light fw-semibold btn-login"
+                href="/profile/login/"
+                data-visible="loggedOut"
+                role="button"
+                >Login</a
+              >
+              <a
+                class="btn btn-light text-primary fw-semibold me-lg-5 btn-register"
+                href="/profile/register/"
+                data-visible="loggedOut"
+                role="button"
+                >Register</a
+              >
+              <a
+                class="btn btn-outline-light fw-semibold btn-logout"
+                data-visible="loggedIn"
+                href="/"
+                role="button"
+                >Logout</a
+              >
+              <a
+                class="btn btn-light text-primary fw-semibold me-lg-5 btn-profile"
+                href="/profile/"
+                data-visible="loggedIn"
+                role="button"
+                >Profile</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="">
+      <section class="container-fluid">
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </section>
+      <section class=""></section>
+    </main>
+    <footer
+      class="footer mt-auto py-3 border-top border-primary border-2 text-center"
+    >
+      <div class="container">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#" class="text-decoration-none">Terms and Conditions</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-decoration-none">Contact</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-decoration-none">Our Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-decoration-none">Terms and Conditions</a>
+          </li>
+        </ul>
+        <span class="text-muted fs-7"
+          >Copyright <i class="fa-regular fa-copyright"></i> 2023
+          Noroff-auction-marked</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
