@@ -10,7 +10,7 @@
       src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
-    <script src="/src/js/index.js" type="module" defer></script>
+    <script src="/src/js/index.mjs" type="module" defer></script>
     <script
       src="https://kit.fontawesome.com/16bf78a0e8.js"
       crossorigin="anonymous"
@@ -74,13 +74,12 @@
                 role="button"
                 >Register</a
               >
-              <a
+              <button
                 class="btn btn-outline-light fw-semibold btn-logout"
                 data-visible="loggedIn"
-                href="/"
-                role="button"
-                >Logout</a
               >
+                Logout
+              </button>
               <a
                 class="btn btn-light text-primary fw-semibold me-lg-5 btn-profile"
                 href="/profile/"
