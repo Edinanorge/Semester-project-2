@@ -27,6 +27,25 @@
   margin-top: -70px;
 }
 
+// general
+
+form {
+  max-width: 700px;
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.success {
+  color: $success;
+}
+
+.error {
+  color: $error;
+}
+
+// Sections
 .footer,
 .section-hero {
   background-color: $gray-200;
@@ -39,14 +58,12 @@ main {
   background-color: $gray-100;
 }
 
-.fs-7 {
-  font-size: 14px;
-}
-
 .section-about {
   background-color: hsla(0, 0%, 100%, 0.85);
   max-width: 900px;
 }
+
+// Media
 
 @media only screen and (min-width: 992px) {
   .section-about {
@@ -55,8 +72,4 @@ main {
     left: 1%;
     right: 1%;
   }
-}
-
-form {
-  max-width: 700px;
 }
