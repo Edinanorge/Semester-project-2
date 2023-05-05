@@ -1,13 +1,12 @@
 import { BASE_URL } from "../constants.mjs";
 import * as storage from "../../storage/index.mjs";
+import { headers } from "../headers.mjs";
 
 export async function login(email, password) {
   try {
     const response = await fetch(`${BASE_URL}/auth/login`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
       method: "POST",
+      headers: headers(),
       body: JSON.stringify({ email, password }),
     });
 

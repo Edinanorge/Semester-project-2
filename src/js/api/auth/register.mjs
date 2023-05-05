@@ -1,11 +1,11 @@
+import { header } from "../../ui/header/header.mjs";
 import { BASE_URL } from "../constants.mjs";
+import { headers } from "../headers.mjs";
 
 export async function register(name, email, password, avatar) {
   try {
     const response = await fetch(`${BASE_URL}/auth/register`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: headers(),
       method: "POST",
       body: JSON.stringify({ name, email, password, avatar }),
     });

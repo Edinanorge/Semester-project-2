@@ -73,145 +73,171 @@
     </header>
     <main>
       <section class="container-fluid section-hero">
-        <div class="row text-center text-lg-start">
-          <div class="col m-5 p-5" id="profileDetails">
-            <h1>Name:</h1>
-            <p>Email:</p>
-            <p>Conts:</p>
-            <button
-              class="btn btn-secondary btn-cta mt-3"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
+        <div class="row">
+          <div class="col-12 col-md-6 p-5">
+            <img
+              alt="Profile image"
+              id="profileImageContainer"
+              class="img-fluid"
+            />
+            <form
+              id="updateProfileAvatarForm"
+              class="d-flex align-items-center py-2"
             >
-              Add new listing
-            </button>
+              <label class="fw-semibold" for="avatar">Update avatar :</label>
+              <input
+                type="url"
+                class="form-control text-muted"
+                name="avatar"
+                placeholder="Avatar(url)"
+              />
 
-            <div
-              class="modal fade"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <h2 class="text-center">Add something to sell.</h2>
-                    <form class="bg-light p-5 rounded w-100 mt-5">
-                      <div class="form-floating mb-3">
-                        <input
-                          type="url"
-                          class="form-control border bg-input-color"
-                          name="media"
-                          placeholder="media"
-                        />
-                        <label for="media">Image(url) </label>
-                      </div>
+              <button
+                class="btn btn-outline-dark"
+                type="submit"
+                title="Update profile picture"
+              >
+                <i class="fa-regular fa-pen-to-square"></i>
+              </button>
+            </form>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="text-center text-md-start m-5">
+              <h1>
+                Name:<span id="nameContainer" class="ps-1 fw-normal"></span>
+              </h1>
+              <p class="fw-semibold">
+                Email:<span id="emailContainer" class="ps-1 fw-normal"></span>
+              </p>
+              <p class="fw-semibold">
+                Credit:<span id="creditContainer" class="ps-1 fw-normal"></span>
+              </p>
+              <p class="fw-semibold">
+                Listings:<span
+                  id="listingsCountContainer"
+                  class="ps-1 fw-normal"
+                ></span>
+              </p>
+              <button
+                class="btn btn-secondary btn-cta mt-3"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Add new listing
+              </button>
 
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="Title"
-                          name="title"
-                          required
-                        />
-                        <label for="floatingInput"
-                          >Title <span class="text-primary"> *</span></label
-                        >
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="Description"
-                          name="description"
-                        />
-                        <label for="floatingInput">Description </label>
-                      </div>
-
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingInput"
-                          placeholder="Tags"
-                          name="tags"
-                          placeholder="tags"
-                          pattern="^[0-9a-zA-Z_,]*$"
-                          title="Tags must be separeted by comma."
-                        />
-                        <label for="floatingInput">Tags: </label>
-                      </div>
-
-                      <div id="createListingFeedback"></div>
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
                       <button
-                        class="w-100 btn btn-lg btn-secondary"
-                        type="submit"
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <h2 class="text-center">Add something to sell.</h2>
+                      <form
+                        class="bg-light p-5 rounded w-100 mt-5"
+                        id="addListingForm"
                       >
-                        Add
-                      </button>
-                    </form>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="url"
+                            class="form-control border bg-input-color"
+                            name="media"
+                            placeholder="media"
+                            pattern="^[0-9a-zA-Z_,]*$"
+                          />
+                          <label for="media">Gallery(url) </label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Title"
+                            name="title"
+                            required
+                          />
+                          <label for="floatingInput"
+                            >Title <span class="text-primary"> *</span></label
+                          >
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Description"
+                            name="description"
+                          />
+                          <label for="floatingInput">Description </label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Ends"
+                            name="endsAt"
+                            required
+                          />
+                          <label for="floatingInput">Ends At: </label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="Tags"
+                            name="tags"
+                            placeholder="tags"
+                            pattern="^[0-9a-zA-Z_,]*$"
+                            title="Tags must be separeted by comma."
+                          />
+                          <label for="floatingInput">Tags: </label>
+                        </div>
+
+                        <div id="createListingFeedback"></div>
+                        <button
+                          class="w-100 btn btn-lg btn-secondary"
+                          type="submit"
+                        >
+                          Add
+                        </button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <img
-            src="/images/hero.jpg"
-            alt="Profile image"
-            class="col profile-img img-fluid p-0"
-          />
-          <div class="dropdown text-end">
-            <button
-              class="btn btn-outline-dark dropdown-toggle btn-edit-profile"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              title="Update profile picture"
-            >
-              <i class="fa-regular fa-pen-to-square"></i>
-            </button>
-
-            <form class="w-100 p-4 dropdown-menu" id="editProfile">
-              <label for="avatar">Update profile picture :</label>
-              <div>
-                <input
-                  type="url"
-                  class="form-control mb-3 text-muted"
-                  name="avatar"
-                  placeholder="Avatar(url)"
-                  autofocus
-                  required
-                />
-              </div>
-              <div id="editProfileMessage" class="fs-7 mb-1"></div>
-              <button type="submit" class="btn btn-secondary">
-                Edit avatar
-              </button>
-            </form>
-          </div>
         </div>
       </section>
 
       <section class="container-fluid section-Listings">
-        <div class="mx-lg-5 px-lg-5 text-center text-lg-start">
-          <h3 class="pt-lg-5 mt-lg-5">Listings:</h3>
-          <div id="featuredContainer">
+        <div class="text-center text-lg-start p-5">
+          <h3 class="pb-3">Listings:</h3>
+          <div
+            id="listingsContainer"
+            class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-4"
+          >
             <div class="text-center">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
@@ -222,9 +248,9 @@
       </section>
 
       <section class="container-fluid section-winns">
-        <div class="mx-lg-5 px-lg-5 text-center text-lg-start">
-          <h3 class="pt-lg-5 mt-lg-5">Winns:</h3>
-          <div class="" id="featuredContainer">
+        <div class="text-center text-lg-start p-5">
+          <h3 class="pb-3">Winns:</h3>
+          <div class="" id="winsContainer">
             <div class="text-center">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>

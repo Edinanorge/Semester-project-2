@@ -1,5 +1,6 @@
 import { login } from "../api/auth/login.mjs";
 import { displayMessage } from "../api/helpers..mjs";
+import { load } from "../storage/load.mjs";
 
 export function submitLoginForm() {
   const form = document.querySelector("#loginForm");
@@ -12,8 +13,9 @@ export function submitLoginForm() {
       try {
         await login(email, password);
         setTimeout(() => {
-          location.href(`/profile?name=${email}`);
-        }, 300);
+          const { name } = load("user");
+          location.href = `/profile/?name=${name}`;
+        }, 500);
       } catch (error) {
         displayMessage("loginFeedback", error.message, "error");
       }

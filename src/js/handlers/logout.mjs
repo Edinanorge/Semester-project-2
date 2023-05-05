@@ -7,7 +7,7 @@ export function logoutLisener() {
       logout();
       setTimeout(() => {
         location.assign("/");
-      }, 2000);
+      }, 500);
     })
   );
 }
