@@ -1,7 +1,7 @@
 @import "variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// buttons
+// buttons/links
 .btn {
   transition: all 0.2s;
 }
@@ -27,10 +27,19 @@
   margin-top: -70px;
 }
 
+.listings-card:link,
+.listings-card:visited {
+  transition: all 0.5s, transform 0.5s;
+  &:hover,
+  &:active {
+    transform: scale(1.02);
+  }
+}
+
 // general
 
 form {
-  max-width: 700px;
+  max-width: 80rem;
 }
 
 .fs-7 {
