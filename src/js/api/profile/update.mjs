@@ -7,7 +7,7 @@ export async function updateProfile(user) {
       throw new Error("Update requires a name");
     }
 
-    const response = fetch(`${BASE_URL}/profiles/${user.name}/media`, {
+    const response = await fetch(`${BASE_URL}/profiles/${user.name}/media`, {
       method: "PUT",
       headers: headers(),
       body: JSON.stringify(user),
@@ -16,7 +16,9 @@ export async function updateProfile(user) {
     if (response.ok) {
       return await response.json();
     } else {
-      throw new Error("Sorry, we were unable to update your avatar.");
+      const errorResponse = await response.json();
+      const errorMessage = errorResponse.errors[0].message;
+      throw new Error(errorMessage);
     }
   } catch (error) {
     throw error;
