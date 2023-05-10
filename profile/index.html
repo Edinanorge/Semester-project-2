@@ -24,7 +24,7 @@
     <title>Noroff Marked | Profile page</title>
   </head>
   <body>
-    <header class="p-2 text-bg-primary sticky-top shadow">
+    <header class="text-bg-primary sticky-top shadow">
       <nav class="navbar navbar-expand-lg navbar-dark text-bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand d-flex ms-lg-5 ps-lg-4" href="/">
@@ -54,11 +54,18 @@
               />
             </form>
             <div class="text-center" id="#authLinks">
+              <a class="btn text-white fw-semibold" href="/">Home</a>
               <a
-                class="btn text-white fw-semibold btn-login"
+                class="btn text-white fw-semibold"
                 href="/listings/"
                 role="button"
                 >Exlpore</a
+              >
+              <a
+                class="btn text-white fw-semibold active-link"
+                href="/profile/"
+                data-visible="loggedIn"
+                >Profile</a
               >
               <button
                 class="btn btn-outline-light fw-semibold btn-logout"
@@ -72,10 +79,11 @@
       </nav>
     </header>
     <main>
-      <section class="container-fluid section-hero">
-        <div class="row">
+      <section class="container section-hero">
+        <div class="row justify-content-center">
           <div class="col-12 col-md-6 p-5">
             <img
+              src="/images/avatar.png"
               alt="Profile image"
               id="profileImageContainer"
               class="img-fluid"
@@ -136,7 +144,7 @@
                 aria-labelledby="staticBackdropLabel"
                 aria-hidden="true"
               >
-                <div class="modal-dialog">
+                <div class="modal-dialog bg-light">
                   <div class="modal-content">
                     <div class="modal-header">
                       <button
@@ -149,7 +157,7 @@
                     <div class="modal-body">
                       <h2 class="text-center">Add something to sell.</h2>
                       <form
-                        class="bg-light p-5 rounded w-100 mt-5"
+                        class="bg-white p-5 rounded w-100 mt-5"
                         id="addListingForm"
                       >
                         <div class="form-floating mb-3">
@@ -158,7 +166,6 @@
                             class="form-control border bg-input-color"
                             name="media"
                             placeholder="media"
-                            pattern="^[0-9a-zA-Z_,]*$"
                           />
                           <label for="media">Gallery(url) </label>
                         </div>
@@ -231,7 +238,7 @@
         </div>
       </section>
 
-      <section class="container-fluid section-Listings">
+      <section class="container section-Listings">
         <div class="text-center text-lg-start p-5">
           <h3 class="pb-3">Listings:</h3>
           <div
@@ -247,7 +254,7 @@
         </div>
       </section>
 
-      <section class="container-fluid section-winns">
+      <section class="container section-winns">
         <div class="text-center text-lg-start p-5">
           <h3 class="pb-3">Winns:</h3>
           <div class="" id="winsContainer">

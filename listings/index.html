@@ -24,7 +24,7 @@
     <title>Noroff Marked | Listings page</title>
   </head>
   <body>
-    <header class="p-2 text-bg-primary sticky-top shadow">
+    <header class="text-bg-primary sticky-top shadow">
       <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand d-flex ms-lg-5 ps-lg-4" href="/">
@@ -54,11 +54,18 @@
               />
             </form>
             <div class="text-center" id="#authLinks">
+              <a class="btn text-white fw-semibold" href="/">Home</a>
               <a
-                class="btn text-white fw-semibold btn-login"
+                class="btn text-white fw-semibold active-link"
                 href="/listings/"
                 role="button"
                 >Exlpore</a
+              >
+              <a
+                class="btn text-white fw-semibold"
+                href="/profile/"
+                data-visible="loggedIn"
+                >Profile</a
               >
               <a
                 class="btn btn-outline-light fw-semibold btn-login"
@@ -80,26 +87,30 @@
               >
                 Logout
               </button>
-              <a
-                class="btn btn-light text-primary fw-semibold me-lg-5 btn-profile"
-                href="/profile/"
-                data-visible="loggedIn"
-                role="button"
-                >Profile</a
-              >
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <main class="">
-      <section class="container-fluid">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
+    <main>
+      <section class="container pt-5">
+        <h1 class="fs-3 mb-5 text-center">Products</h1>
+        <select
+          class="form-select d-inline filter mb-5"
+          aria-label="Default select example"
+          id="filter"
+        >
+          <option selected>All</option>
+          <option value="1">Active</option>
+        </select>
+        <div id="listingsContainer" class="row">
+          <div class="text-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
         </div>
       </section>
-      <section class=""></section>
     </main>
     <footer
       class="footer mt-auto py-3 border-top border-primary border-2 text-center"

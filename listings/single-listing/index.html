@@ -54,24 +54,28 @@
               />
             </form>
             <div class="text-center" id="#authLinks">
+              <a class="btn text-white fw-semibold" href="/">Home</a>
               <a
-                class="btn text-white fw-semibold btn-login"
+                class="btn text-white fw-semibold active-link"
                 href="/listings/"
-                role="button"
                 >Exlpore</a
+              >
+              <a
+                class="btn text-white fw-semibold"
+                href="/profile/"
+                data-visible="loggedIn"
+                >Profile</a
               >
               <a
                 class="btn btn-outline-light fw-semibold btn-login"
                 href="/profile/login/"
                 data-visible="loggedOut"
-                role="button"
                 >Login</a
               >
               <a
                 class="btn btn-light text-primary fw-semibold me-lg-5 btn-register"
                 href="/profile/register/"
                 data-visible="loggedOut"
-                role="button"
                 >Register</a
               >
               <button
@@ -80,23 +84,83 @@
               >
                 Logout
               </button>
-              <a
-                class="btn btn-light text-primary fw-semibold me-lg-5 btn-profile"
-                href="/profile/"
-                data-visible="loggedIn"
-                role="button"
-                >Profile</a
-              >
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main class="position-relative">
-      <section class="container-fluid section-hero">
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
+      <section class="container section-hero">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 p-5">
+            <img
+              src="/images/avatar.png"
+              alt="Listing image"
+              id="listingImageContainer"
+              class="img-fluid single-listing-img"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="text-center text-md-start m-5">
+              <h1 class="fs-4" id="listingTitle">Title</h1>
+              <p class="fw-regular mb-5" id="listingDescription"></p>
+              <div class="fs-7 text-muted text-uppercase">
+                Time left:
+                <p class="text-primary text-lowercase" id="listingEndsAt"></p>
+              </div>
+
+              <div class="fs-7 text-muted text-uppercase">
+                Current bid:
+                <p
+                  class="fs-4 fw-semibold text-dark text-lowercase"
+                  id="listingBids"
+                ></p>
+              </div>
+              <div id="addBidFormFeedback"></div>
+              <form id="addBidForm" class="d-flex align-items-center py-2">
+                <label class="fs-7 text-muted text-uppercase pe-2 text-start"
+                  >Place your bid:
+                  <input
+                    type="number"
+                    class="form-control text-muted"
+                    name="bid"
+                    placeholder="amount"
+                    min="0"
+                    autofocus
+                /></label>
+
+                <button class="btn btn-secondary align-self-end" type="submit">
+                  BID
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="text-center text-lg-start p-5">
+          <h3 class="pb-3">Biddig history:</h3>
+          <div id="biddingHistoryContainer">
+            <div class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="text-center text-lg-start p-5">
+          <h3 class="pb-3">Seller:</h3>
+          <div class="" id="sellerContainer">
+            <div class="text-center">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -8,6 +8,7 @@ const path = location.pathname;
 switch (path) {
   case "/":
     liseners.logoutLisener();
+    pages.renderHomePage();
     break;
   case "/profile/login/":
     liseners.submitLoginForm();
@@ -25,9 +26,12 @@ switch (path) {
     break;
   case "/listings/":
     liseners.logoutLisener();
+    pages.renderListingsPage();
     break;
 
-  case "/listings/sin":
+  case "/listings/single-listing/":
     liseners.logoutLisener();
+    liseners.submitAddBidForm();
+    pages.renderSingleListingPage();
     break;
 }

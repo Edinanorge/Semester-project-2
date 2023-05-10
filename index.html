@@ -24,7 +24,7 @@
     <title>Noroff Marked | Home page</title>
   </head>
   <body>
-    <header class="p-2 text-bg-primary sticky-top shadow">
+    <header class="text-bg-primary sticky-top shadow">
       <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand d-flex ms-lg-5 ps-lg-4" href="/">
@@ -54,24 +54,29 @@
               />
             </form>
             <div class="text-center" id="#authLinks">
-              <a
-                class="btn text-white fw-semibold btn-login"
-                href="/listings/"
-                role="button"
+              <a class="btn text-white fw-semibold active-link" href="/"
+                >Home</a
+              >
+              <a class="btn text-white fw-semibold" href="/listings/"
                 >Exlpore</a
               >
+              <a
+                class="btn text-white fw-semibold"
+                href="./profile/"
+                data-visible="loggedIn"
+              >
+                Profile
+              </a>
               <a
                 class="btn btn-outline-light fw-semibold btn-login"
                 href="./profile/login/"
                 data-visible="loggedOut"
-                role="button"
                 >Login</a
               >
               <a
                 class="btn btn-light text-primary fw-semibold me-lg-5 btn-register"
                 href="./profile/register/"
                 data-visible="loggedOut"
-                role="button"
                 >Register</a
               >
               <buttion
@@ -79,33 +84,29 @@
                 data-visible="loggedIn"
                 >Logout</buttion
               >
-              <a
-                class="btn btn-light text-primary fw-semibold me-lg-5 btn-profile"
-                href="./profile/"
-                data-visible="loggedIn"
-                role="button"
-              >
-                Profile
-              </a>
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main class="position-relative">
-      <section class="container-fluid section-hero">
+      <section class="container-fluid section-hero mb-lg-5">
         <div class="row text-center text-lg-start">
-          <div class="col m-5 p-md-5">
-            <h1>A marketplace were you can by and sell at the same time.</h1>
-            <p>
+          <div class="col m-5 p-md-5 hero-text-box align-self-center">
+            <h1 class="ms-xxl-5">
+              A marketplace were you can by and sell at the same time.
+            </h1>
+            <p class="ms-xxl-5">
               Sell your old books, computer, whatever you want and by a new one.
             </p>
-            <button class="btn btn-secondary btn-cta mt-3">Sell now</button>
+            <button class="btn btn-secondary btn-cta my-3 ms-xxl-5">
+              Sell now
+            </button>
           </div>
           <img
             src="./images/hero.jpg"
-            alt=""
-            class="col img-fluid hero-img d-none d-lg-inline pe-0"
+            alt="Hero image."
+            class="col hero-img d-none d-lg-inline pe-0"
           />
         </div>
       </section>
@@ -133,15 +134,14 @@
         </div>
       </section>
 
-      <section class="container-fluid section-features pt-lg-5 mt-lg-5">
-        <div class="m-lg-5 mb-lg-0 p-lg-5 text-center text-lg-start">
-          <p class="mt-lg-5"></p>
-          <h3 class="pt-lg-5 mt-lg-5">Ending soon</h3>
-          <div class="" id="featuredContainer">
-            <div class="text-center">
-              <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
+      <section class="container section-features">
+        <div class="row">
+          <h2 class="mt-5">Ending sonest:</h2>
+        </div>
+        <div id="featuredContainer" class="row mt-5">
+          <div class="text-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
           </div>
         </div>
