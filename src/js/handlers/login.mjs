@@ -1,5 +1,5 @@
 import { login } from "../api/auth/login.mjs";
-import { displayMessage } from "../api/helpers..mjs";
+import { displayMessage } from "../utility/message.mjs";
 import { load } from "../storage/load.mjs";
 
 export function submitLoginForm() {

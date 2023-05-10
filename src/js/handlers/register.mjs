@@ -1,5 +1,5 @@
 import { register } from "../api/auth/register.mjs";
-import { displayMessage } from "../api/helpers..mjs";
+import { displayMessage } from "../utility/message.mjs";
 
 export function submitRegisterForm() {
   const form = document.querySelector("#registerForm");
