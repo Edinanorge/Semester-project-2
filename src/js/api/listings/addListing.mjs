@@ -3,7 +3,7 @@ import { headers } from "../headers.mjs";
 
 export async function addListing(listing) {
   try {
-    const response = fetch(`${BASE_URL}/listings`, {
+    const response = await fetch(`${BASE_URL}/listings`, {
       method: "POST",
       headers: headers(),
       body: JSON.stringify({
@@ -17,7 +17,9 @@ export async function addListing(listing) {
     if (response.ok) {
       return await response.json();
     } else {
-      throw new Error("error");
+      const errorResponse = await response.json();
+      const errorMessage = errorResponse.errors[0].message;
+      throw new Error(errorMessage);
     }
   } catch (error) {
     throw error;
