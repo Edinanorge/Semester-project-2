@@ -8,11 +8,10 @@ function singleCardTemplate(listing) {
   card.style.width = "18rem";
 
   const img = document.createElement("img");
-  img.src = listing.media ?? `/images/avatar.png`;
-  img.classList.add("card-img-top", "img-fluid");
+  img.src = listing.media[0] ?? `/images/avatar.png`;
+  img.classList.add("card-img-top", "img-fluid", "bg-light");
   img.style.height = "15rem";
   img.style.width = "100%";
-  img.style.backgroundColor = "#D9D9D9";
   img.style.objectFit = "cover";
   img.alt = listing.title;
   card.append(img);
@@ -21,7 +20,7 @@ function singleCardTemplate(listing) {
   cardBody.classList.add("card-body");
 
   const cardTitle = document.createElement("h5");
-  cardTitle.classList.add("card-title");
+  cardTitle.classList.add("card-title", "pb-3");
   cardTitle.textContent = listing.title;
 
   const cardContent = document.createElement("div");
@@ -41,32 +40,42 @@ function singleCardTemplate(listing) {
     cardDate.textContent = "Expired";
   }
 
-  const cardFooter = document.createElement("div");
-  cardFooter.classList.add("card-footer", "d-flex", "justify-content-between");
+  const bids = document.createElement("div");
+  bids.classList.add("text-muted", "text-uppercase", "fs-7");
+  bids.innerText = "current bids:";
 
-  const btnDelete = document.createElement("button");
-  btnDelete.classList.add("btn");
-  btnDelete.innerHTML = "<i class='fa-solid fa-trash-can'></i>";
+  const bidsAmount = document.createElement("span");
+  bidsAmount.classList.add("text-dark", "fw-semibold", "text-lowercase", "fs-4", "m-0", "ps-3");
+  const amounts = listing.bids.map((bid) => bid.amount);
+  const maxAmount = Math.max(...amounts);
+  maxAmount > 0
+    ? (bidsAmount.innerHTML += `${maxAmount} <i class="fa-solid fa-coins text-warning fs-7 pe-2"></i>`)
+    : (bidsAmount.innerHTML += ` 0 <i class="fa-solid fa-coins text-warning fs-7 pe-2"></i>`);
 
-  const btnEdit = document.createElement("button");
-  btnEdit.classList.add("btn");
-  btnEdit.innerHTML = "<i class='fa-solid fa-pen-to-square'></i>";
+  const cardButton = document.createElement("button");
+  if (daysLeft <= 0) {
+    cardButton.classList.add("btn", "btn-light", "m-2", "text-muted");
+    cardButton.innerText = "SOLD";
+  } else {
+    cardButton.classList.add("btn", "btn-secondary", "m-2");
+    cardButton.innerText = "BID";
+  }
 
+  bids.append(bidsAmount);
   cardContent.append(cardDate);
-  cardBody.append(cardTitle, cardContent);
-  cardFooter.append(btnEdit, btnDelete);
-  card.append(cardBody, cardFooter);
+  cardBody.append(cardTitle, cardContent, bids);
+  card.append(cardBody, cardButton);
   cardLink.appendChild(card);
 
   return cardLink;
 }
 
-export function renderSingelCardTemplate(listing, parent) {
+export function renderSingelListingCardTemplate(listing, parent) {
   parent.innerHTML = "";
   parent.append(singleCardTemplate(listing));
 }
 
-export function renderSingelCardTemplates(listingList, parent) {
+export function renderListingsCardTemplates(listingList, parent) {
   parent.innerHTML = "";
   parent.append(...listingList.map(singleCardTemplate));
 }
