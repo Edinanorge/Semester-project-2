@@ -1,5 +1,5 @@
 import { addListing } from "../api/listings/addListing.mjs";
-import { displayMessage } from "../api/helpers..mjs";
+import { displayMessage } from "../utility/message.mjs";
 
 export function submitAddListingForm() {
   const form = document.querySelector("#addListingForm");
@@ -10,7 +10,6 @@ export function submitAddListingForm() {
       const form = e.target;
       const formData = new FormData(form);
       const listing = Object.fromEntries(formData.entries());
-      console.log(listing);
 
       addListing(listing);
       displayMessage("createListingFeedback", "Thanks, your product is on sale.", "succes");
