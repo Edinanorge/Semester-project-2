@@ -17,10 +17,6 @@
   color: $red;
 }
 
-.btn-register:hover {
-  background-color: $white;
-}
-
 .active-link {
   text-decoration: underline;
 }
@@ -72,7 +68,8 @@ main {
 
 .section-about {
   background-color: hsla(0, 0%, 100%, 0.85);
-  max-width: 900px;
+  max-width: 57rem;
+  margin: 0 auto;
 }
 .avatar-img {
   width: 5rem;
@@ -90,20 +87,12 @@ main {
 @media only screen and (min-width: 992px) {
   .section-about {
     position: absolute;
-    top: 20%;
-    left: 1%;
-    right: 1%;
+    top: -80px;
+    left: 0;
+    right: 0;
   }
 
   .section-features {
     padding-top: 15rem;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .section-about {
-    position: absolute;
-    top: 25%;
-    left: 1%;
-    right: 1%;
   }
 }
