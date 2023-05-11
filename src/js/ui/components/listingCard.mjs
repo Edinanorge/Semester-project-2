@@ -8,7 +8,7 @@ function singleCardTemplate(listing) {
   card.style.width = "18rem";
 
   const img = document.createElement("img");
-  img.src = listing.media[0] ?? `/images/avatar.png`;
+  img.src = listing.media[0] ?? `/images/placeholder.png`;
   img.classList.add("card-img-top", "img-fluid", "bg-light");
   img.style.height = "15rem";
   img.style.width = "100%";

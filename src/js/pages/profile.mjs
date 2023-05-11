@@ -17,7 +17,7 @@ export async function renderProfilePage() {
 
   nameContainer.innerText += user.name;
   emailContainer.innerText += user.email;
-  creditContainer.innerText += user.credits;
+  creditContainer.innerHTML += `${user.credits} <i class="fa-solid fa-coins text-warning fs-7 "></i>`;
   listingsCoutContainer.innerText += user._count.listings;
 
   if (user.avatar) {
