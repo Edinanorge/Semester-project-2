@@ -47,13 +47,13 @@
           >
             <form class="d-flex m-3 m-lg-0">
               <input
-                class="form-control"
+                class="form-control border-0"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
             </form>
-            <div class="text-center" id="#authLinks">
+            <div class="text-center authLinks" id="#authLinks">
               <a class="btn text-white fw-semibold active-link" href="/"
                 >Home</a
               >
@@ -74,7 +74,7 @@
                 >Login</a
               >
               <a
-                class="btn btn-light text-primary fw-semibold me-lg-5 btn-register"
+                class="btn btn-secondary text-dark fw-semibold me-lg-5 btn-register"
                 href="./profile/register/"
                 data-visible="loggedOut"
                 >Register</a
@@ -89,7 +89,7 @@
         </div>
       </nav>
     </header>
-    <main class="position-relative">
+    <main>
       <section class="container-fluid section-hero mb-lg-5">
         <div class="row text-center text-lg-start">
           <div class="col m-5 p-md-5 hero-text-box align-self-center">
@@ -99,9 +99,14 @@
             <p class="ms-xxl-5">
               Sell your old books, computer, whatever you want and by a new one.
             </p>
-            <button class="btn btn-secondary btn-cta my-3 ms-xxl-5">
-              Sell now
-            </button>
+            <a
+              class="btn btn-secondary btn-cta my-3 ms-xxl-5"
+              href="./profile/register/"
+              >Register</a
+            >
+            <a class="btn btn-outline-dark btn-cta my-3" href="./listings/"
+              >Explore</a
+            >
           </div>
           <img
             src="./images/hero.jpg"
@@ -111,8 +116,8 @@
         </div>
       </section>
 
-      <section class="container text-center section-about shadow rounded p-5">
-        <div class="row">
+      <section class="container position-relative">
+        <div class="row section-about shadow rounded p-5 text-center">
           <h2 class="pb-3">How it works?</h2>
           <div class="col-12 col-lg-4 p-4">
             <i class="fa-solid fa-right-to-bracket text-primary fs-2 pb-3"></i>
@@ -136,11 +141,11 @@
 
       <section class="container section-features">
         <div class="row">
-          <h2 class="mt-5">Ending sonest:</h2>
+          <h2 class="mt-5">Ending soon:</h2>
         </div>
         <div id="featuredContainer" class="row mt-5">
           <div class="text-center">
-            <div class="spinner-border" role="status">
+            <div class="spinner-border p-3" role="status">
               <span class="visually-hidden">Loading...</span>
             </div>
           </div>
