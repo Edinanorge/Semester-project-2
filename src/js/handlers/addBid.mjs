@@ -24,7 +24,7 @@ export function submitAddBidForm() {
             location.reload();
           }, 1000);
         } else {
-          displayMessage("addBidFormFeedback", "Ooops! Loks like you forget to log in.", "error");
+          displayMessage("addBidFormFeedback", "Ooops! Looks like you forgot to log in.", "error");
         }
       } catch (error) {
         displayMessage("addBidFormFeedback", error, "error");
