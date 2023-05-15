@@ -2,7 +2,7 @@
 
 This is a semester project 2 for Front-end Development at Noroff.
 
-![Screenshoot](./images/Screenshot%202023-05-15%20at%2013-58-02%20Noroff%20Marked%20Home%20page.png)
+![Screenshot](./images/Screenshot%202023-05-15%20at%2013-58-02%20Noroff%20Marked%20Home%20page.png)
 
 ## Brief
 
@@ -28,10 +28,11 @@ All API functionality is managed by an existing application. This project only c
 
 ## Workflows/hooks
 
-- Project is configured to run Prettier on commit
-- Project is configured to run ESLint on commit
-- Project default branch is protected, code is versioned and branching conventions have been followed
-- Project is configured to build and deploy to pages on merge to default branch
+- project is configured to run Prettier on commit.
+- project is configured to run ESLint on commit.
+- project default branch is protected
+- code is versioned and branching conventions have been followed.
+- project is configured to build and deploy to pages on merge to default branch.
 
 ## Built With
 
