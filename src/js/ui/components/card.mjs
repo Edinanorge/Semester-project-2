@@ -37,7 +37,7 @@ function singleCardTemplate(listing) {
   if (daysLeft >= 0) {
     cardDate.textContent = `${daysLeft} days left`;
   } else {
-    cardDate.style.backgroundColor = "#000";
+    cardDate.classList.add("bg-dark", "text-white");
     cardDate.textContent = "Expired";
   }
 

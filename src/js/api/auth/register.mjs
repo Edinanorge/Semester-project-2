@@ -1,4 +1,3 @@
-import { header } from "../../ui/header/header.mjs";
 import { BASE_URL } from "../constants.mjs";
 import { headers } from "../headers.mjs";
 

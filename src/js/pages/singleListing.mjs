@@ -23,7 +23,7 @@ export async function renderSingleListingPage() {
 
   document.title = listing.title;
 
-  listingImage.src = listing.media[0] ?? `/images/avatar.png`;
+  listingImage.src = listing.media[0] ?? `/images/placeholder.png`;
   listingTitle.innerHTML = listing.title;
   listingDescription.innerHTML = listing.description;
 

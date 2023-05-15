@@ -2,6 +2,7 @@ import { getProfile } from "../api/profile/getProfile.mjs";
 import { load } from "../storage/load.mjs";
 import { renderSingelCardTemplates } from "../ui/components/card.mjs";
 import { renderErrorMessage } from "../ui/components/error.mjs";
+import { renderWinsListingsTemplates } from "../ui/components/winns.mjs";
 
 export async function renderProfilePage() {
   const { name } = load("user");
@@ -17,7 +18,7 @@ export async function renderProfilePage() {
 
   nameContainer.innerText += user.name;
   emailContainer.innerText += user.email;
-  creditContainer.innerText += user.credits;
+  creditContainer.innerHTML += `${user.credits} <i class="fa-solid fa-coins text-warning fs-7 "></i>`;
   listingsCoutContainer.innerText += user._count.listings;
 
   if (user.avatar) {
@@ -36,6 +37,6 @@ export async function renderProfilePage() {
   if (Array.isArray(user.wins) && user.wins.length === 0) {
     renderErrorMessage("You don't have any wins yet", winsContainer);
   } else {
-    renderSingelCardTemplates(user.listings, winsContainer);
+    renderWinsListingsTemplates(user.wins);
   }
 }
