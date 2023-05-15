@@ -3,7 +3,7 @@ import { headers } from "../headers.mjs";
 
 export async function getListings() {
   try {
-    const response = await fetch(`${BASE_URL}/listings?_seller=true&_bids=true`, {
+    const response = await fetch(`${BASE_URL}/listings?_seller=true&_bids=true&sort=created`, {
       method: "GET",
       headers: headers(),
     });
@@ -20,7 +20,7 @@ export async function getListings() {
 
 export async function getActiveListings() {
   try {
-    const response = await fetch(`${BASE_URL}/listings?_seller=true&_bids=true&_active=true`, {
+    const response = await fetch(`${BASE_URL}/listings?_seller=true&_bids=true&_active=true&sort=created`, {
       method: "GET",
       headers: headers(),
     });
