@@ -30,9 +30,9 @@ All API functionality is managed by an existing application. This project only c
 
 - project is configured to run Prettier on commit.
 - project is configured to run ESLint on commit.
-- project default branch is protected
+- the project default branch is protected.
 - code is versioned and branching conventions have been followed.
-- project is configured to build and deploy to pages on merge to default branch.
+- project is configured to build and deploy to pages on merge to the default branch.
 
 ## Built With
 
