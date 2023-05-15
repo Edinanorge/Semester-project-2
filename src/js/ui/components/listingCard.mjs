@@ -1,14 +1,14 @@
 function singleCardTemplate(listing) {
   const cardLink = document.createElement("a");
   cardLink.classList.add("text-dark", "text-decoration-none", "col", "listings-card", "mb-3");
-  cardLink.href = `/listings/single-listing/?id=${listing.id}`;
+  cardLink.href = `./listings/single-listing/?id=${listing.id}`;
 
   const card = document.createElement("div");
   card.classList.add("card", "m-auto", "border-0", "shadow", "position-relative");
   card.style.width = "18rem";
 
   const img = document.createElement("img");
-  img.src = listing.media[0] ?? `/images/placeholder.png`;
+  img.src = listing.media[0] ?? `./images/placeholder.png`;
   img.classList.add("card-img-top", "img-fluid", "bg-light");
   img.style.height = "15rem";
   img.style.width = "100%";
