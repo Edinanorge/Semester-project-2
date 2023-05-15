@@ -45,13 +45,15 @@
             class="collapse navbar-collapse d-lg-flex justify-content-between pe-lg-4"
             id="navbarScroll"
           >
-            <form class="d-flex m-3 m-lg-0">
+            <form class="d-flex m-3 m-lg-0" id="searchForm">
               <input
                 class="form-control"
                 type="search"
+                name="search"
                 placeholder="Search"
                 aria-label="Search"
               />
+              <button class="btn btn-outline-light ms-1">Search</button>
             </form>
             <div class="text-center authLinks" id="#authLinks">
               <a class="btn text-white fw-semibold" href="/">Home</a>
@@ -88,6 +90,7 @@
           </div>
         </div>
       </nav>
+      <div class="text-bg-light text-center" id="searchResults"></div>
     </header>
     <main class="position-relative">
       <section class="container section-hero">
