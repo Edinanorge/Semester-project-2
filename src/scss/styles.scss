@@ -30,10 +30,18 @@
   }
 }
 
+.wins-link:hover {
+  box-shadow: 0 2rem 1rem rgba($primary, 0.3);
+}
+
 // general
 
 form {
   max-width: 40rem;
+}
+
+#searchForm .form-control {
+  border-radius: 4px;
 }
 
 .filter {
