@@ -1,0 +1,106 @@
+@import "variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// buttons/links
+.btn {
+  transition: all 0.2s;
+}
+.btn-login:hover,
+.btn-logout:hover,
+.btn-register:hover,
+.btn-cta:hover {
+  transform: scale(1.1);
+}
+
+.btn-login:hover,
+.btn-logout:hover {
+  color: $red;
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+.listings-card:link,
+.listings-card:visited {
+  transition: all 0.5s, transform 0.5s;
+  &:hover,
+  &:active {
+    transform: scale(1.02);
+  }
+}
+
+.wins-link:hover {
+  box-shadow: 0 2rem 1rem rgba($primary, 0.3);
+}
+
+// general
+
+form {
+  max-width: 40rem;
+}
+
+#searchForm .form-control {
+  border-radius: 4px;
+}
+
+.filter {
+  max-width: fit-content;
+}
+
+.fs-7 {
+  font-size: 12px;
+}
+
+.success {
+  color: $success;
+}
+
+.error {
+  color: $error;
+}
+
+// Sections
+.footer,
+.section-hero {
+  background-color: $gray-200;
+  .hero-img {
+    width: 455px;
+    object-fit: cover;
+  }
+}
+
+main {
+  background-color: $gray-100;
+}
+
+.section-about {
+  background-color: hsla(0, 0%, 100%, 0.85);
+  max-width: 57rem;
+  margin: 0 auto;
+}
+.avatar-img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.single-listing-img {
+  max-height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+// Media
+
+@media only screen and (min-width: 992px) {
+  .section-about {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+  }
+
+  .section-features {
+    padding-top: 15rem;
+  }
+}
