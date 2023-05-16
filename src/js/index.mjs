@@ -6,21 +6,21 @@ header();
 
 const path = location.pathname;
 switch (path) {
-  case "./":
+  case "/":
     pages.renderHomePage();
     liseners.search();
     liseners.logoutLisener();
     break;
 
-  case "./profile/login/":
+  case "/profile/login/":
     liseners.submitLoginForm();
     break;
 
-  case "./profile/register/":
+  case "/profile/register/":
     liseners.submitRegisterForm();
     break;
 
-  case "./profile/":
+  case "/profile/":
     pages.renderProfilePage();
     liseners.search();
     liseners.logoutLisener();
@@ -28,13 +28,13 @@ switch (path) {
     liseners.submitAddListingForm();
     break;
 
-  case "./listings/":
+  case "/listings/":
     pages.renderListingsPage();
     liseners.search();
     liseners.logoutLisener();
     break;
 
-  case "./listings/single-listing/":
+  case "/listings/single-listing/":
     pages.renderSingleListingPage();
     liseners.search();
     liseners.logoutLisener();
