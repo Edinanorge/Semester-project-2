@@ -10,7 +10,6 @@ export async function renderSingleListingPage() {
   const id = urlParams.get("id");
 
   const listing = await getListing(id);
-  console.log(listing);
 
   const listingImage = document.querySelector("#listingImageContainer");
   const listingTitle = document.querySelector("#listingTitle");
