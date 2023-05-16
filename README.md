@@ -32,7 +32,7 @@ All API functionality is managed by an existing application. This project only c
 - project is configured to run ESLint on commit.
 - project default branch is protected
 - code is versioned and branching conventions have been followed.
-- project is configured to build and deploy to pages on merge to default branch.
+- project is configured to build and deploy to pages on merge to the default branch.
 
 ## Built With
 
@@ -87,5 +87,5 @@ edinanorge@gmail.com
 | Design Prototype | https://www.figma.com/file/I9kd8FwBe7xD67rCkNUDta/Semester-Project?type=design&t=NPKLaIiOKbOhefSA-12         |
 | Style Guide      | https://www.figma.com/file/oCrb5Nfovf0OPlH45nmOUi/Style-Guide?type=design&node-id=0%3A1&t=NPKLaIiOKbOhefSA-1 |
 | Kanban Board     | https://github.com/users/Edinanorge/projects/1/views/1                                                       |
-| Repository       | https://github.com/Edinanorge/Semester-project-2.git2                                                        |
+| Repository       | https://github.com/Edinanorge/Semester-project-2                                                             |
 | Hosted Demo      |
