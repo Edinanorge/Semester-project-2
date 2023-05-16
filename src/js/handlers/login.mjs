@@ -14,7 +14,7 @@ export function submitLoginForm() {
         await login(email, password);
         setTimeout(() => {
           const { name } = load("user");
-          location.href = `/profile/?name=${name}`;
+          location.href = `./profile/?name=${name}`;
         }, 500);
       } catch (error) {
         displayMessage("loginFeedback", error.message, "error");

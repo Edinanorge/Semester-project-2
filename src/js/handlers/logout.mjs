@@ -6,7 +6,7 @@ export function logoutLisener() {
     btn.addEventListener("click", () => {
       logout();
       setTimeout(() => {
-        location.assign("/");
+        location.assign("./");
       }, 500);
     })
   );
