@@ -1,4 +1,4 @@
- function sellerTemplate(seller) {
+function sellerTemplate(seller) {
   const card = document.createElement("div");
   card.classList.add("d-flex", "align-items-center");
 
@@ -7,7 +7,7 @@
   card.appendChild(avatarCol);
 
   const avatarImg = document.createElement("img");
-  avatarImg.src = seller.avatar ?? `/images/avatar.png`;
+  avatarImg.src = seller.avatar ?? `./images/avatar.png`;
   avatarImg.classList.add("img-fluid");
   avatarImg.classList.add("avatar-img");
   avatarImg.alt = "Seller avatar";
