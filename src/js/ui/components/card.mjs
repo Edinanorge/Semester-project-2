@@ -1,7 +1,7 @@
 function singleCardTemplate(listing) {
   const cardLink = document.createElement("a");
   cardLink.classList.add("text-dark", "text-decoration-none", "col", "listings-card", "mb-3");
-  cardLink.href = `./listings/single-listing/?id=${listing.id}`;
+  cardLink.href = `/listings/single-listing/?id=${listing.id}`;
 
   const card = document.createElement("div");
   card.classList.add("card", "m-auto", "border-0", "shadow", "position-relative");
