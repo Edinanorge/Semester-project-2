@@ -13,7 +13,7 @@ export function submitRegisterForm() {
       try {
         await register(name, email, password, avatar);
         setTimeout(() => {
-          location.assign("/profile/login");
+          location.assign("./profile/login");
         }, 300);
       } catch (error) {
         displayMessage("registerFeedback", error.message, "error");

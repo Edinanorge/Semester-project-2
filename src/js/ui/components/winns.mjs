@@ -10,10 +10,10 @@ function winsTemplate(wins) {
 
   const mediaLink = document.createElement("a");
   mediaLink.classList.add("wins-link");
-  mediaLink.href = `/listings/single-listing/?id=${wins.id}`;
+  mediaLink.href = `./listings/single-listing/?id=${wins.id}`;
 
   const mediaImg = document.createElement("img");
-  mediaImg.src = wins.media[0] ?? "/images/placeholder.png";
+  mediaImg.src = wins.media[0] ?? "./images/placeholder.png";
   mediaImg.classList.add("img-fluid");
   mediaImg.classList.add("avatar-img");
   mediaImg.alt = "wins media";
