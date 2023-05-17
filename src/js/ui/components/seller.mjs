@@ -1,6 +1,6 @@
- function sellerTemplate(seller) {
+function sellerTemplate(seller) {
   const card = document.createElement("div");
-  card.classList.add("d-flex", "align-items-center");
+  card.classList.add("d-flex", "flex-column", "flex-md-row", "align-items-start");
 
   const avatarCol = document.createElement("div");
   avatarCol.classList.add("m-2");

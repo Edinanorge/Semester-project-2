@@ -5,7 +5,7 @@ function singleCardTemplate(listing) {
 
   const card = document.createElement("div");
   card.classList.add("card", "m-auto", "border-0", "shadow", "position-relative");
-  card.style.width = "18rem";
+  card.style.maxWidth = "18rem";
 
   const img = document.createElement("img");
   img.src = listing.media ?? `/images/avatar.png`;
