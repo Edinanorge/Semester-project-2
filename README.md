@@ -86,5 +86,5 @@ edinanorge@gmail.com
 | Design Prototype | https://www.figma.com/file/I9kd8FwBe7xD67rCkNUDta/Semester-Project?type=design&t=NPKLaIiOKbOhefSA-12         |
 | Style Guide      | https://www.figma.com/file/oCrb5Nfovf0OPlH45nmOUi/Style-Guide?type=design&node-id=0%3A1&t=NPKLaIiOKbOhefSA-1 |
 | Kanban Board     | https://github.com/users/Edinanorge/projects/1/views/1                                                       |
-| Repository       | https://github.com/Edinanorge/Semester-project-2.git2                                                        |
-| Hosted Demo      |
+| Repository       | https://github.com/Edinanorge/Semester-project-2                                                             |
+| Hosted Demo      | https://noroffmarked.netlify.app                                                                             |
