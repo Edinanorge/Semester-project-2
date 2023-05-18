@@ -1,6 +1,6 @@
 {
   "name": "auction-app",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Auction app for Noroff",
   "main": "index.js",
   "type": "module",
