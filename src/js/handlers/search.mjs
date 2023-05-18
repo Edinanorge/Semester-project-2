@@ -5,7 +5,6 @@ import { renderWinsTemplates } from "../ui/components/winns.mjs";
 
 export async function search() {
   const listings = await getListings();
-  console.log(listings);
   const form = document.querySelector("#searchForm");
   const formInput = document.querySelector("input[type=search]");
 
