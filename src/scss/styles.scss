@@ -40,8 +40,11 @@ form {
   max-width: 40rem;
 }
 
-#searchForm .form-control {
-  border-radius: 4px;
+#searchForm {
+  max-width: 100%;
+  &.form-control {
+    border-radius: 4px;
+  }
 }
 
 .filter {
