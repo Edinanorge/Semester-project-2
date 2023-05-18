@@ -17,6 +17,10 @@
   color: $red;
 }
 
+.authLinks a:hover {
+  text-decoration: underline;
+}
+
 .active-link {
   text-decoration: underline;
 }
