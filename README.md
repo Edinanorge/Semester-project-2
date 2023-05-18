@@ -61,6 +61,12 @@ git https://github.com/Edinanorge/Semester-project-2.git
 npm install
 ```
 
+3. Build
+
+```
+npm run build
+```
+
 ### Running
 
 1. To run the app, run the following commands:
